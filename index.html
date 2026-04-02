@@ -61,6 +61,20 @@ nav a {
   max-width: 1100px;
   margin: auto;
 }
+  .section h3 {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section h3::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #0a1f44;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 
 .team {
   display: grid;
@@ -69,14 +83,21 @@ nav a {
 }
 
 .card {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border: none;
+  padding: 25px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .gta {
-  background-color: #f5f7fa;
+  background: linear-gradient(135deg, #f5f7fa, #e9eef5);
+  padding: 80px 40px;
 }
 
 footer {
