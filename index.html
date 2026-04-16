@@ -166,6 +166,12 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+  .fade-in {
+  transition: all 0.8s ease;
+}
+
+.fade-in:nth-child(1) { transition-delay: 0.1s; }
+.fade-in:nth-child(2) { transition-delay: 0.2s; }
 
 /* カードホバー */
 .card {
@@ -178,7 +184,7 @@ footer {
 }
 
 /* ヒーローアニメーション */
-.hero h1 {
+.hero h2 {
   animation: fadeUp 1.2s ease forwards;
 }
 
@@ -242,8 +248,7 @@ footer {
   </a>
 </nav>
 </header>
-<section class="fade-in">
-<section class="hero">
+<section class="hero fade-in">
 <h2>アジア展開を加速する、経営パートナーへ。</h2>
 
 <p>
@@ -283,7 +288,7 @@ footer {
   </p>
 </section>
   
-<section class="section" id="services">
+<section class="section fade-in" id="services">
   <h3>Our Services</h3>
 <div class="team">
 
@@ -346,7 +351,7 @@ footer {
 </p>
 </section>
 
-<section class="section">
+<section class="section fade-in">
   <h3>What We Cover</h3>
 
   <ul style="line-height:2;">
@@ -358,7 +363,7 @@ footer {
 </ul>
 </section>
   
-  <section class="section">
+<section class="section fade-in">
   <h3>Why KYI</h3>
 
   <div class="team">
@@ -389,7 +394,7 @@ footer {
   </div>
 </section>
 
-<section class="gta">
+<section class="gta fade-in">
 <div class="section">
 <h3>Global Network</h3>
 <p>
@@ -404,7 +409,7 @@ footer {
 </div>
 </section>
 
-  <section class="section">
+<section class="section fade-in">
   <h3>Message</h3>
 
   <p>
@@ -420,7 +425,7 @@ footer {
 
 </section>
 
-<section class="section" id="team">
+<section class="section fade-in" id="team">
   <h3>Our Team</h3>
 <div class="team">
 
@@ -450,7 +455,7 @@ footer {
 </div>
 </section>
 
-  <section class="section">
+<section class="section fade-in">
   <h3>Our Approach</h3>
 <p style="margin-top:20px; font-weight:bold;">
  戦略設計から実行まで、一貫して支援します。
@@ -482,7 +487,7 @@ footer {
     </div>
   </div>
 </section>
- <section class="case-study">
+<section class="case-study fade-in">
   <div class="container">
     <h2>Case Study</h2>
 
@@ -515,7 +520,7 @@ footer {
     </div>
   </div>
 </section>
-  <section class="section" style="text-align:center;">
+<section class="section fade-in" style="text-align:center;">
   <h3>Let’s Talk</h3>
  <p>
   香港・アジア展開、税務戦略、グループ構造について、
@@ -537,7 +542,7 @@ footer {
   </a>
 </section>
 
-<section id="contact" class="cta">
+<section id="contact" class="cta fade-in">
   <div class="container">
 
    <h2>アジア展開を加速させませんか？</h2>
