@@ -17,57 +17,34 @@ body {
   color: #111;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff;
-  z-index: 1000;
-  border-bottom: 1px solid #eee;
-}
-
-.header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
+header {
+  background-color: #0a1f44;
+  color: white;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* ロゴ */
-.logo img {
-  height: 30px;
+header h1 {
+  margin: 0;
+  font-size: 22px;
 }
 
-/* ナビ */
-.nav a {
+nav a {
+  color: white;
   margin-left: 20px;
   text-decoration: none;
-  color: #333;
-  font-size: 14px;
 }
-.hero {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  background-image: url("images/your-image.jpg");
+.hero {
+  background: linear-gradient(rgba(10,31,68,0.85), rgba(10,31,68,0.85)),
+  url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');
   background-size: cover;
   background-position: center;
-}
-  .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-}
-
-.hero-inner {
-  position: relative;
-  color: #fff;
+  color: white;
+  text-align: center;
+  padding: 140px 20px;
 }
 
 .hero h2 {
@@ -153,12 +130,13 @@ body {
  text-align: left;
   margin-bottom: 50px;
 }
-.cta {
+  .cta {
   padding: 120px 20px;
   text-align: center;
   background: #0f2f24;
   color: #fff;
 }
+
 .cta h2 {
   font-size: 28px;
   margin-bottom: 20px;
@@ -274,20 +252,32 @@ footer {
 
 <body>
 
-<header class="header">
-  <div class="header-inner">
+<header>
+  <h1 style="display:flex; align-items:center;">
+<img src="logo.png" style="
+  height:34px;
+  margin-right:12px;
+">
+    KYI
+  </h1>
+<nav>
+  <a href="#">Home</a>
+  <a href="#services">Services</a>
+  <a href="#team">Team</a>
+  <a href="#contact">Contact</a>
 
-    <div class="logo">
-      <img src="images/logo.png" alt="KYI">
-    </div>
-
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-  </div>
+  <a href="#contact" style="
+    margin-left:20px;
+    padding:8px 16px;
+    background:#ffffff;
+    color:#0a1f44;
+    border-radius:5px;
+    font-weight:bold;
+    text-decoration:none;
+  ">
+    Contact
+  </a>
+</nav>
 </header>
 <section class="hero fade-in">
 <h2>アジア展開を加速する、経営パートナーへ。</h2>
