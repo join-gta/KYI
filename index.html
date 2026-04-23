@@ -48,7 +48,26 @@ body {
   font-size: 14px;
 }
 .hero {
-  margin-top: 80px;
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("images/your-image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+  .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-inner {
+  position: relative;
+  color: #fff;
 }
 
 .hero h2 {
@@ -134,13 +153,12 @@ body {
  text-align: left;
   margin-bottom: 50px;
 }
-  .cta {
+.cta {
   padding: 120px 20px;
   text-align: center;
   background: #0f2f24;
   color: #fff;
 }
-
 .cta h2 {
   font-size: 28px;
   margin-bottom: 20px;
