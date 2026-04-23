@@ -640,6 +640,21 @@ footer {
 © 2026 KYI Advisory Limited
 </footer>
 <script>
+const fadeEls = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+  fadeEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+});
+
+// 初期表示でも発火（これ重要）
+window.dispatchEvent(new Event('scroll'));
+
+// ヘッダー影
 window.addEventListener('scroll', () => {
   const header = document.querySelector('.header');
   if (window.scrollY > 10) {
