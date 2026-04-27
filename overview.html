@@ -1,47 +1,226 @@
-<section class="section">
-  <h2>Company Overview</h2>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overview | KYI Advisory</title>
 
-  <table style="width:100%; margin-top:30px; line-height:2;">
-    <tr>
-      <td><strong>Company</strong></td>
-      <td>KYI Advisory Limited</td>
-    </tr>
-    <tr>
-      <td><strong>CEO</strong></td>
-      <td>Kenichi Yokofujita</td>
-    </tr>
-    <tr>
-      <td><strong>Established</strong></td>
-      <td>2014</td>
-    </tr>
-  </table>
+<style>
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.hero {
+  margin-top: 80px;
+  padding: 140px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(10,31,68,0.85), rgba(10,31,68,0.85)),
+  url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600');
+  background-size: cover;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  opacity: 0.9;
+}
+
+.section {
+  padding: 100px 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.highlight {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.map-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.cta {
+  background: #0f2f24;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: #fff;
+  color: #0f2f24;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+footer {
+  background: #0a1f44;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width:768px) {
+  .map-section {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <strong>KYI</strong>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>KYI Advisory Limited</h1>
+  <p>Global Accounting & Strategic Advisory</p>
+  <p>香港から、アジアへ。経営判断を支えるパートナーとして。</p>
 </section>
 
 <section class="section">
-  <h3>Our Locations</h3>
+  <h2>About KYI</h2>
+  <p>
+    KYIは香港を拠点とするクロスボーダー専門のアドバイザリーファームです。<br>
+    会計・税務にとどまらず、企業の成長戦略そのものを設計します。
+  </p>
 
-  <div class="team">
-
-    <div class="card">
-      <h4>Hong Kong</h4>
-      <p>MG Tower, Kwun Tong</p>
-      <iframe src="https://www.google.com/maps?q=MG+Tower+Kwun+Tong+Hong+Kong&output=embed"
-        width="100%" height="200" style="border:0;"></iframe>
-    </div>
-
-    <div class="card">
-      <h4>Tokyo</h4>
-      <p>日本橋室町</p>
-      <iframe src="https://www.google.com/maps?q=日本橋室町&output=embed"
-        width="100%" height="200" style="border:0;"></iframe>
-    </div>
-
-    <div class="card">
-      <h4>Bangkok</h4>
-      <p>Asoke</p>
-      <iframe src="https://www.google.com/maps?q=Asoke+Bangkok&output=embed"
-        width="100%" height="200" style="border:0;"></iframe>
-    </div>
-
+  <div class="highlight">
+    We design structure. We enable growth.
   </div>
 </section>
+
+<section class="section">
+  <h2>Firm Snapshot</h2>
+  <div class="cards">
+    <div class="card">Hong Kong Based</div>
+    <div class="card">Cross-border Focus</div>
+    <div class="card">Global Network</div>
+    <div class="card">Japanese Clients</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>What We Do</h2>
+  <div class="cards">
+    <div class="card">Market Entry</div>
+    <div class="card">Tax Structuring</div>
+    <div class="card">Governance</div>
+    <div class="card">M&A / Exit</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Our Strength</h2>
+  <div class="cards">
+    <div class="card">Strategic Advisory</div>
+    <div class="card">Cross-border Expertise</div>
+    <div class="card">Integrated Support</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Global Network</h2>
+  <p>Global Tax Association network across 30+ countries</p>
+</section>
+
+<section class="section">
+  <h2>Office</h2>
+
+  <div class="map-section">
+    <div>
+      <p>
+        Room E, 6/F., MG Tower<br>
+        133 Hoi Bun Road<br>
+        Kwun Tong, Kowloon, Hong Kong
+      </p>
+      <p>
+        info@kyi-advisory.com
+      </p>
+    </div>
+
+    <iframe
+      src="https://www.google.com/maps?q=MG+Tower+Kwun+Tong+Hong+Kong&output=embed"
+      width="100%"
+      height="300"
+      style="border:0; border-radius:10px;">
+    </iframe>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Let’s Talk</h2>
+  <p>アジア展開・税務戦略についてご相談ください</p>
+  <a href="index.html#contact">Contact</a>
+</section>
+
+<footer>
+© 2026 KYI Advisory Limited
+</footer>
+
+</body>
+</html>
