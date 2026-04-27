@@ -11,6 +11,7 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   background: #fff;
   color: #111;
+  line-height: 1.8;
 }
 
 .header {
@@ -28,7 +29,6 @@ body {
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .nav a {
@@ -40,7 +40,7 @@ body {
 
 .hero {
   margin-top: 80px;
-  padding: 140px 20px;
+  padding: 160px 20px;
   text-align: center;
   color: white;
   background: linear-gradient(rgba(10,31,68,0.85), rgba(10,31,68,0.85)),
@@ -49,7 +49,8 @@ body {
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
 .hero p {
@@ -57,35 +58,50 @@ body {
 }
 
 .section {
-  padding: 100px 30px;
-  max-width: 1100px;
-  margin: auto;
+  max-width: 800px;
+  margin: 120px auto;
+  padding: 0 20px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 30px;
+.center {
+  text-align: center;
 }
 
-.card {
-  padding: 25px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #0a1f44;
+  margin-top: 10px;
+}
+
+.center h2::after {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .highlight {
-  text-align: center;
   font-size: 22px;
-  font-weight: bold;
-  margin-top: 20px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.divider {
+  border-top: 1px solid #eee;
+  margin: 80px 0;
 }
 
 .map-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -93,14 +109,15 @@ body {
   background: #0f2f24;
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
+  margin-top: 120px;
 }
 
 .cta a {
   display: inline-block;
   margin-top: 20px;
-  padding: 14px 30px;
-  background: #fff;
+  padding: 14px 32px;
+  background: white;
   color: #0f2f24;
   text-decoration: none;
   border-radius: 6px;
@@ -142,7 +159,7 @@ footer {
   <p>香港から、アジアへ。経営判断を支えるパートナーとして。</p>
 </section>
 
-<section class="section">
+<section class="section center">
   <h2>About KYI</h2>
   <p>
     KYIは香港を拠点とするクロスボーダー専門のアドバイザリーファームです。<br>
@@ -154,50 +171,71 @@ footer {
   </div>
 </section>
 
-<section class="section">
+<div class="divider"></div>
+
+<section class="section center">
   <h2>Firm Snapshot</h2>
-  <div class="cards">
-    <div class="card">Hong Kong Based</div>
-    <div class="card">Cross-border Focus</div>
-    <div class="card">Global Network</div>
-    <div class="card">Japanese Clients</div>
-  </div>
+  <p>
+    Hong Kong Based<br>
+    Cross-border Focus<br>
+    Global Network<br>
+    Japanese Clients
+  </p>
 </section>
 
-<section class="section">
+<div class="divider"></div>
+
+<section class="section center">
   <h2>What We Do</h2>
-  <div class="cards">
-    <div class="card">Market Entry</div>
-    <div class="card">Tax Structuring</div>
-    <div class="card">Governance</div>
-    <div class="card">M&A / Exit</div>
-  </div>
+  <p style="font-size:18px;">
+    Market Entry / Tax Structuring / Governance / M&A / Exit
+  </p>
 </section>
+
+<div class="divider"></div>
 
 <section class="section">
   <h2>Our Strength</h2>
-  <div class="cards">
-    <div class="card">Strategic Advisory</div>
-    <div class="card">Cross-border Expertise</div>
-    <div class="card">Integrated Support</div>
-  </div>
+
+  <p>
+    <strong>Strategic Advisory</strong><br>
+    経営判断に踏み込む支援
+  </p>
+
+  <p>
+    <strong>Cross-border Expertise</strong><br>
+    国際税務・構造設計
+  </p>
+
+  <p>
+    <strong>Integrated Support</strong><br>
+    戦略から実行まで一貫
+  </p>
 </section>
 
-<section class="section">
+<div class="divider"></div>
+
+<section class="section center">
   <h2>Global Network</h2>
-  <p>Global Tax Association network across 30+ countries</p>
+  <p>
+    Global Tax Association network across 30+ countries
+  </p>
 </section>
+
+<div class="divider"></div>
 
 <section class="section">
   <h2>Office</h2>
 
   <div class="map-section">
+
     <div>
       <p>
         Room E, 6/F., MG Tower<br>
         133 Hoi Bun Road<br>
         Kwun Tong, Kowloon, Hong Kong
       </p>
+
       <p>
         info@kyi-advisory.com
       </p>
@@ -209,6 +247,7 @@ footer {
       height="300"
       style="border:0; border-radius:10px;">
     </iframe>
+
   </div>
 </section>
 
