@@ -292,6 +292,57 @@ footer {
   font-size: 20px;
   letter-spacing: 1px;
 }
+  .global-network {
+  padding: 100px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.network-sub {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.map-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.world-map {
+  width: 100%;
+  opacity: 0.9;
+}
+
+/* 共通ピン */
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #0f2f24;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* 各国位置（調整OK） */
+.hongkong { top: 60%; left: 70%; }
+.japan { top: 55%; left: 75%; }
+.singapore { top: 75%; left: 68%; }
+.uk { top: 40%; left: 48%; }
+.usa { top: 45%; left: 20%; }
+
+/* アニメーション */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  70% { transform: scale(1.8); opacity: 0.3; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.network-text {
+  margin-top: 40px;
+  color: #555;
+  line-height: 1.8;
+}
   
 </style>
 </head>
