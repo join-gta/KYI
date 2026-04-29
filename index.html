@@ -385,9 +385,51 @@ footer {
   white-space: nowrap;
   font-weight: 500;
 }
-  .label {
+/* ラベル */
+.label {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  background: white;
+  padding: 3px 6px;
+  border-radius: 4px;
   opacity: 0;
   transition: 0.3s;
+  white-space: nowrap;
+}
+
+/* ホバーで表示 */
+.pin:hover .label {
+  opacity: 1;
+}
+
+/* 線 */
+.lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.lines line {
+  stroke: #0f2f24;
+  stroke-width: 1.5;
+  opacity: 0.4;
+}
+
+/* 情報ボックス */
+.info-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  display: none;
 }
 
 .pin:hover .label {
@@ -595,27 +637,46 @@ footer {
 </section>
 
 <section class="map-section">
-  <div class="container">
+  <div class="map-wrapper">
 
-    <h3 style="text-align:center;">Global Network</h3>
+    <img src="worldmap.png" class="map">
 
-    <div class="map-wrapper">
-　　<img src="worldmap.png" class="map">　
+    <!-- 線 -->
+    <svg class="lines">
+      <line x1="70%" y1="54%" x2="30%" y2="52%" />
+      <line x1="70%" y1="54%" x2="72%" y2="62%" />
+      <line x1="70%" y1="54%" x2="77%" y2="73%" />
+      <line x1="70%" y1="54%" x2="52%" y2="42%" />
+    </svg>
 
-<div class="pin us"><span class="label">USA</span></div>
-<div class="pin eu"><span class="label">Europe</span></div>
-<div class="pin hk"><span class="label">Hong Kong</span></div>
-<div class="pin sg"><span class="label">Singapore</span></div>
-<div class="pin au"><span class="label">Australia</span></div>
+    <!-- ピン -->
+    <div class="pin us" onclick="showInfo('usa')">
+      <span class="label">USA</span>
     </div>
 
-    <p class="network-text">
-      KYIはGlobal Tax Associationのネットワークを通じ、
-      各国の専門家と直接連携しています。<br>
-      クロスボーダー案件において、迅速かつ正確な対応を実現します。
-    </p>
+    <div class="pin eu" onclick="showInfo('eu')">
+      <span class="label">Europe</span>
+    </div>
+
+    <div class="pin hk" onclick="showInfo('hk')">
+      <span class="label">Hong Kong</span>
+    </div>
+
+    <div class="pin sg" onclick="showInfo('sg')">
+      <span class="label">Singapore</span>
+    </div>
+
+    <div class="pin au" onclick="showInfo('au')">
+      <span class="label">Australia</span>
+    </div>
 
   </div>
+
+  <!-- 情報ボックス -->
+  <div id="info-box" class="info-box">
+    <p id="info-text">拠点情報</p>
+  </div>
+
 </section>
 <div class="divider"></div>
 
@@ -993,6 +1054,22 @@ footer {
 <footer>
 © 2026 KYI Advisory Limited
 </footer>
+function showInfo(region) {
+  const box = document.getElementById("info-box");
+  const text = document.getElementById("info-text");
+
+  const data = {
+    usa: "United States: クロスボーダー税務・投資案件対応",
+    eu: "Europe: EU圏の税務・拠点設計サポート",
+    hk: "Hong Kong: アジア展開の中核拠点",
+    sg: "Singapore: 東南アジア戦略拠点",
+    au: "Australia: 投資・事業展開サポート"
+  };
+
+  text.innerText = data[region];
+  box.style.display = "block";
+}
+  
 <script>
 const fadeEls = document.querySelectorAll('.fade-in');
 
