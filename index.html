@@ -354,7 +354,16 @@ footer {
   top: 72%;
   left: 75%;
 }
+.pin {
+  box-shadow: 0 0 0 rgba(15,47,36,0.4);
+  animation: pulse 2s infinite;
+}
 
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(15,47,36,0.5); }
+  70% { box-shadow: 0 0 0 12px rgba(15,47,36,0); }
+  100% { box-shadow: 0 0 0 0 rgba(15,47,36,0); }
+}
 .network-text {
   margin-top: 40px;
   color: #555;
