@@ -254,10 +254,16 @@ footer {
   font-size: 14px;
   color: #777;
 }
-  @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .message-section {
+    flex-direction: column;
+    text-align: center;
   }
+
+  .message-img img {
+    width: 200px;
+  }
+}
 
   .hero h1 {
     font-size: 32px;
@@ -321,6 +327,10 @@ footer {
   display: block;
   margin: 0 auto;
 }
+  .map {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  border-radius: 12px;
+}
 
 /* ピン */
 .pin {
@@ -377,6 +387,24 @@ footer {
   margin-top: 40px;
   color: #555;
   line-height: 1.8;
+}
+  .message-section {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.message-img img {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.message-text {
+  flex: 1;
+  line-height: 1.9;
+  color: #444;
 }
   
 </style>
@@ -551,17 +579,19 @@ footer {
 </section>
 
 <section class="map-section">
-  <div class="map-wrapper">
+  <div class="container">
 
-    <img src="images/worldmap.png" class="map">
+    <h3 style="text-align:center;">Global Network</h3>
 
-    <div class="pin us"></div>
-    <div class="pin eu"></div>
-    <div class="pin hk"></div>
-    <div class="pin sg"></div>
-    <div class="pin au"></div>
+    <div class="map-wrapper">
+      <img src="images/worldmap.png" class="map">
 
-  </div>
+      <div class="pin us"></div>
+      <div class="pin eu"></div>
+      <div class="pin hk"></div>
+      <div class="pin sg"></div>
+      <div class="pin au"></div>
+    </div>
 
     <p class="network-text">
       KYIはGlobal Tax Associationのネットワークを通じ、
