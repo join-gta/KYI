@@ -375,6 +375,24 @@ footer {
   box-shadow: 0 0 0 rgba(15,47,36,0.4);
   animation: pulse 2s infinite;
 }
+  .label {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #0f2f24;
+  white-space: nowrap;
+  font-weight: 500;
+}
+  .label {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.pin:hover .label {
+  opacity: 1;
+}
 
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(15,47,36,0.5); }
@@ -584,11 +602,11 @@ footer {
     <div class="map-wrapper">
 　　<img src="worldmap.png" class="map">　
 
-      <div class="pin us"></div>
-      <div class="pin eu"></div>
-      <div class="pin hk"></div>
-      <div class="pin sg"></div>
-      <div class="pin au"></div>
+<div class="pin us"><span class="label">USA</span></div>
+<div class="pin eu"><span class="label">Europe</span></div>
+<div class="pin hk"><span class="label">Hong Kong</span></div>
+<div class="pin sg"><span class="label">Singapore</span></div>
+<div class="pin au"><span class="label">Australia</span></div>
     </div>
 
     <p class="network-text">
