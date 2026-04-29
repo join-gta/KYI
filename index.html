@@ -305,37 +305,54 @@ footer {
 
 .map-wrapper {
   position: relative;
-  max-width: 800px;
-  margin: 40px auto;
+  display: inline-block;
 }
 
-.world-map {
+.map {
   width: 100%;
-  opacity: 0.9;
+  max-width: 900px;
 }
 
-/* 共通ピン */
-.dot {
+/* ピン */
+.pin {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   background: #0f2f24;
   border-radius: 50%;
-  animation: pulse 2s infinite;
+  transform: translate(-50%, -50%);
 }
 
-/* 各国位置（調整OK） */
-.hongkong { top: 60%; left: 70%; }
-.japan { top: 55%; left: 75%; }
-.singapore { top: 75%; left: 68%; }
-.uk { top: 40%; left: 48%; }
-.usa { top: 45%; left: 20%; }
+/* ===== ここが調整済み ===== */
 
-/* アニメーション */
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  70% { transform: scale(1.8); opacity: 0.3; }
-  100% { transform: scale(1); opacity: 1; }
+/* アメリカ（テキサス寄り） */
+.us {
+  top: 48%;
+  left: 27%;
+}
+
+/* ヨーロッパ（イタリア付近） */
+.eu {
+  top: 40%;
+  left: 51.5%;
+}
+
+/* 香港 */
+.hk {
+  top: 53%;
+  left: 69.5%;
+}
+
+/* シンガポール */
+.sg {
+  top: 61%;
+  left: 71%;
+}
+
+/* オーストラリア（中央より少し左） */
+.au {
+  top: 72%;
+  left: 75%;
 }
 
 .network-text {
@@ -515,28 +532,18 @@ footer {
   </div>
 </section>
 
-<section class="global-network fade-in">
-  <div class="container">
+<section class="map-section">
+  <div class="map-wrapper">
 
-    <h3>Global Network</h3>
-        <div class="map-wrapper">
-      <img src="images/worldmap.png" class="world-map">
-    </div>
+    <img src="images/world-map.png" class="map">
 
-    <p class="network-sub">
-      世界30カ国以上の専門家ネットワーク
-    </p>
+    <div class="pin us"></div>
+    <div class="pin eu"></div>
+    <div class="pin hk"></div>
+    <div class="pin sg"></div>
+    <div class="pin au"></div>
 
-    <div class="map-wrapper">
-      <img src="worldmap.png" class="world-map">
-
-      <!-- 拠点ピン -->
-      <span class="dot hongkong"></span>
-      <span class="dot japan"></span>
-      <span class="dot singapore"></span>
-      <span class="dot uk"></span>
-      <span class="dot usa"></span>
-    </div>
+  </div>
 
     <p class="network-text">
       KYIはGlobal Tax Associationのネットワークを通じ、
