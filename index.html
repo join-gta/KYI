@@ -317,13 +317,22 @@ footer {
 
 .map-wrapper {
   position: relative;
-  display: inline-block;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
 }
 
 .map {
   width: 100%;
-  max-width: 850px;
   display: block;
+  filter: grayscale(100%) brightness(1.08);
+}
+
+.map-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .map-lines line {
@@ -331,15 +340,8 @@ footer {
   stroke-width: 0.3;
   opacity: 0.5;
   stroke-dasharray: 4;
-  animation: dash 8s linear infinite;
 }
 
-@keyframes dash {
-  to {
-    stroke-dashoffset: -20;
-  }
-}
-/* ピン */
 .pin {
   position: absolute;
   width: 14px;
@@ -348,7 +350,6 @@ footer {
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-
 /* アメリカ（テキサス） */
 .us {
   top: 51.5%;
