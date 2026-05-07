@@ -315,6 +315,12 @@ footer {
   background: #f9f9f9;
 }
 
+.map-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: #f7f7f7;
+}
+
 .map-wrapper {
   position: relative;
   width: 100%;
@@ -325,7 +331,7 @@ footer {
 .map {
   width: 100%;
   display: block;
-  filter: grayscale(100%) brightness(1.08);
+  border-radius: 20px;
 }
 
 .map-lines {
@@ -339,7 +345,6 @@ footer {
   stroke: #0f2f24;
   stroke-width: 0.3;
   opacity: 0.5;
-  stroke-dasharray: 4;
 }
 
 .pin {
@@ -350,35 +355,13 @@ footer {
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-/* アメリカ（テキサス） */
-.us {
-  top: 51.5%;
-  left: 30%;
-}
 
-/* ヨーロッパ（イタリア） */
-.eu {
-  top: 42%;
-  left: 53%;
-}
-
-/* 香港 */
-.hk {
-  top: 54%;
-  left: 70%;
-}
-
-/* シンガポール */
-.sg {
-  top: 62%;
-  left: 72%;
-}
-
-/* オーストラリア */
-.au {
-  top: 74%;
-  left: 77%;
-}
+/* 位置 */
+.us { top: 58%; left: 28%; }
+.eu { top: 40%; left: 52%; }
+.hk { top: 50%; left: 69%; }
+.sg { top: 61%; left: 71%; }
+.au { top: 73%; left: 76%; }
 .pin {
   box-shadow: 0 0 0 rgba(15,47,36,0.4);
   animation: pulse 2s infinite;
