@@ -334,19 +334,29 @@ footer {
   border-radius: 20px;
 }
 
+  .map-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 .map-lines path {
   fill: none;
   stroke: #0f2f24;
-  stroke-width: 0.35;
-  opacity: 0.5;
+
+  stroke-width: 0.45;
+  opacity: 0.55;
 
   stroke-linecap: round;
 
-  stroke-dasharray: 4 3;
+  stroke-dasharray: 6 4;
 
-  animation: flow 12s linear infinite;
+  animation: flow 14s linear infinite;
+
+  filter: drop-shadow(0 0 2px rgba(15,47,36,0.15));
 }
-
 .pin {
   position: absolute;
   width: 12px;
@@ -358,6 +368,9 @@ footer {
   z-index: 10;
 
   box-shadow: 0 0 15px rgba(15,47,36,0.3);
+
+  animation: pulse 3s infinite;
+  cursor: pointer;
 }
 /* 位置 */
 .us { top: 57%; left: 30%; }
