@@ -334,14 +334,6 @@ footer {
   border-radius: 20px;
 }
 
-.map-lines {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .map-lines path {
   fill: none;
   stroke: #0f2f24;
@@ -368,12 +360,12 @@ footer {
   box-shadow: 0 0 15px rgba(15,47,36,0.3);
 }
 /* 位置 */
-.us { top: 57%; left: 29%; }
-.eu { top: 39%; left: 53%; }
-.hk { top: 49%; left: 70%; }
-.sg { top: 61%; left: 72%; }
-.au { top: 73%; left: 77%; }
-
+.us { top: 57%; left: 30%; }
+.eu { top: 40%; left: 53%; }
+.hk { top: 49%; left: 69%; }
+.sg { top: 60%; left: 71%; }
+.au { top: 73%; left: 76%; }
+  
   .label {
   position: absolute;
   top: -25px;
@@ -643,7 +635,7 @@ footer {
   </div>
 </section>
 
-<section class="map-section">
+<section class="map-section fade-in">
 
   <h2>Global Network</h2>
 
@@ -655,18 +647,40 @@ footer {
     <!-- 線 -->
     <svg class="map-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
 
-<line x1="29" y1="57" x2="53" y2="39" />
-<line x1="53" y1="39" x2="70" y2="49" />
-<line x1="70" y1="49" x2="72" y2="61" />
-<line x1="72" y1="61" x2="77" y2="73" />
+      <!-- US → EU -->
+      <path d="M29 57 Q40 48 53 39" />
+
+      <!-- EU → HK -->
+      <path d="M53 39 Q62 42 70 49" />
+
+      <!-- HK → SG -->
+      <path d="M70 49 Q71 54 72 61" />
+
+      <!-- SG → AU -->
+      <path d="M72 61 Q74 67 77 73" />
+
     </svg>
 
     <!-- ピン -->
-    <div class="pin us" data-label="United States"></div>
-    <div class="pin eu" data-label="Europe"></div>
-    <div class="pin hk" data-label="Hong Kong"></div>
-    <div class="pin sg" data-label="Singapore"></div>
-    <div class="pin au" data-label="Australia"></div>
+    <div class="pin us">
+      <span class="label">United States</span>
+    </div>
+
+    <div class="pin eu">
+      <span class="label">Europe</span>
+    </div>
+
+    <div class="pin hk">
+      <span class="label">Hong Kong</span>
+    </div>
+
+    <div class="pin sg">
+      <span class="label">Singapore</span>
+    </div>
+
+    <div class="pin au">
+      <span class="label">Australia</span>
+    </div>
 
   </div>
 
