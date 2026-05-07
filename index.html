@@ -637,40 +637,28 @@ footer {
 </section>
 
 <section class="map-section">
-  <div class="map-wrapper">
+<div class="map-wrapper">
 
-    <img src="worldmap.png" class="map">
+  <img src="worldmap.png" class="map">
 
-    <!-- 線 -->
-    <svg class="lines">
-      <line x1="70%" y1="54%" x2="30%" y2="52%" />
-      <line x1="70%" y1="54%" x2="72%" y2="62%" />
-      <line x1="70%" y1="54%" x2="77%" y2="73%" />
-      <line x1="70%" y1="54%" x2="52%" y2="42%" />
-    </svg>
+  <!-- 線 -->
+  <svg class="map-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
 
-    <!-- ピン -->
-    <div class="pin us" onclick="showInfo('usa')">
-      <span class="label">USA</span>
-    </div>
+    <line x1="27" y1="48" x2="51.5" y2="40" />
+    <line x1="51.5" y1="40" x2="69.5" y2="53" />
+    <line x1="69.5" y1="53" x2="71" y2="61" />
+    <line x1="71" y1="61" x2="75" y2="72" />
 
-    <div class="pin eu" onclick="showInfo('eu')">
-      <span class="label">Europe</span>
-    </div>
+  </svg>
 
-    <div class="pin hk" onclick="showInfo('hk')">
-      <span class="label">Hong Kong</span>
-    </div>
+  <!-- ピン -->
+  <div class="pin us" data-label="United States"></div>
+  <div class="pin eu" data-label="Europe"></div>
+  <div class="pin hk" data-label="Hong Kong"></div>
+  <div class="pin sg" data-label="Singapore"></div>
+  <div class="pin au" data-label="Australia"></div>
 
-    <div class="pin sg" onclick="showInfo('sg')">
-      <span class="label">Singapore</span>
-    </div>
-
-    <div class="pin au" onclick="showInfo('au')">
-      <span class="label">Australia</span>
-    </div>
-
-  </div>
+</div>
 
   <!-- 情報ボックス -->
   <div id="info-box" class="info-box">
